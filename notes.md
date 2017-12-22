@@ -5,3 +5,4 @@ update changes : recompile
 * Module : collection of different functions
 * There is no instance variable in FP
 * We can have different function with the same name inside one module
+* Tuple: is like an array, where each index has special meaning

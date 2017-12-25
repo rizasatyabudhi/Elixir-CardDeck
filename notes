@@ -10,3 +10,7 @@ update changes : recompile
   ** in JS, we would have {hand:[],deck:[]}
 * Pattern Matching: Variable assignment in Elixir
 * Pipe Operator (|>) : a function that runs multiple function at once
+* install library steps:
+  1. open mix.exs
+  2. add {:ex_doc,"~> 0.12"} to the deps
+  3. run mix deps.get

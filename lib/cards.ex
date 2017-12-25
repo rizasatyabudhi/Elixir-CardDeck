@@ -1,4 +1,11 @@
 defmodule Cards do
+
+  # For documentation creation
+  # then run mix docs
+
+  @moduledoc """
+    Provides methods for creating and handling deck of cards
+  """
   def create_deck do
     values = ["Ace","Two","Three","Four","Five"]
     suits = ["Spades","Clubs","Hearts","Diamonds"]
@@ -43,6 +50,7 @@ defmodule Cards do
     # hand = Cards.deal(deck,hand_size)
 
     # The return value from pipe operator is assigned to the FIRST argument
+    # This makes us have to write consistent function argument order
     Cards.create_deck
     |> Cards.shuffle
     |> Cards.deal(hand_size)

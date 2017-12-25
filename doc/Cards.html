@@ -98,6 +98,9 @@
     <a href="#contain?/2">contain?(deck, card)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Determines whether a deck contains a given card</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -115,6 +118,11 @@
   <div class="summary-signature">
     <a href="#deal/2">deal(deck, hand_size)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Divides a deck into a hand and the remainder of the deck.
+  The <code class="inline">hand_size</code> argument indicates how many cards should
+  be in the hand</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -169,7 +177,16 @@
     
   </div>
   <section class="docstring">
-    
+    <p>  Determines whether a deck contains a given card</p>
+<h2 id="contain?/2-examples" class="section-heading">
+  <a href="#contain?/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; deck = Cards.create_deck
+iex&gt; Cards.contain?(deck,&quot;Ace of Spades&quot;)
+true</code></pre>
+
   </section>
 </div>
 <div class="detail" id="create_deck/0">
@@ -220,7 +237,19 @@
     
   </div>
   <section class="docstring">
-    
+    <p>  Divides a deck into a hand and the remainder of the deck.
+  The <code class="inline">hand_size</code> argument indicates how many cards should
+  be in the hand.</p>
+<h2 id="deal/2-examples" class="section-heading">
+  <a href="#deal/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; deck = Cards.create_deck
+iex&gt; {hand,deck} = Cards.deal(deck,1)
+iex&gt; hand
+[&quot;Ace of Spades&quot;]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="load/1">

@@ -14,3 +14,8 @@ update changes : recompile
   1. open mix.exs
   2. add {:ex_doc,"~> 0.12"} to the deps
   3. run mix deps.get
+
+
+* Testing:
+  * Case test: 1+1 == 2
+  * Doc test = test the example within the @doc documentation

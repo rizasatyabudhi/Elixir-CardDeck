@@ -2,10 +2,10 @@ defmodule Cards do
 
   # For documentation creation
   # then run mix docs
-
   @moduledoc """
     Provides methods for creating and handling deck of cards
   """
+
   def create_deck do
     values = ["Ace","Two","Three","Four","Five"]
     suits = ["Spades","Clubs","Hearts","Diamonds"]
@@ -22,10 +22,33 @@ defmodule Cards do
   end
 
   #  "?" usually used for function that returns True / False
+  @doc """
+    Determines whether a deck contains a given card
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contain?(deck,"Ace of Spades")
+      true
+
+  """
   def contain?(deck,card) do
     Enum.member?(deck,card)
   end
 
+  @doc """
+    Divides a deck into a hand and the remainder of the deck.
+    The `hand_size` argument indicates how many cards should
+    be in the hand.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> {hand,deck} = Cards.deal(deck,1)
+      iex> hand
+      ["Ace of Spades"]
+
+  """
   def deal(deck,hand_size) do
     Enum.split(deck,hand_size)
   end

@@ -29,7 +29,22 @@ defmodule Cards do
   end
 
   def load(filename) do
-    {status,binary} = File.read(filename)
-    term = :erlang.binary_to_term(binary)
+    # Pattern matching
+    # _reason = unused variable, so we give _
+    case File.read(filename) do
+      {:ok,binary} -> :erlang.binary_to_term(binary)
+      {:error, _reason} -> "Filname doesn't exists!"
+    end
+  end
+
+  def create_hand(hand_size) do
+    # deck = Cards.create_deck
+    # deck = Cards.shuffle(deck)
+    # hand = Cards.deal(deck,hand_size)
+
+    # The return value from pipe operator is assigned to the FIRST argument
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
   end
 end

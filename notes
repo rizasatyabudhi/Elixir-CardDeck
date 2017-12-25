@@ -9,3 +9,4 @@ update changes : recompile
   ** { *hand* , *deck* }
   ** in JS, we would have {hand:[],deck:[]}
 * Pattern Matching: Variable assignment in Elixir
+* Pipe Operator (|>) : a function that runs multiple function at once
